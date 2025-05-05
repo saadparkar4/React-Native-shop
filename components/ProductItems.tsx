@@ -24,8 +24,8 @@ const ProductItems = () => {
 				<Image
 					source={{ uri: "https://i.giphy.com/KX5nwoDX97AtPvKBF6.webp" }}
 					style={{
-						width: 140,
-						height: 140,
+						width: 120,
+						height: 120,
 						margin: 20,
 						borderRadius: 10,
 					}}
@@ -53,8 +53,8 @@ const ProductItems = () => {
 				<Image
 					source={{ uri: "https://i.giphy.com/KX5nwoDX97AtPvKBF6.webp" }}
 					style={{
-						width: 140,
-						height: 140,
+						width: 120,
+						height: 120,
 						margin: 20,
 						borderRadius: 10,
 					}}
