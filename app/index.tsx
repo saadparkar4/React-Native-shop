@@ -22,17 +22,3 @@ export default function Index() {
 		</View>
 	);
 }
-
-// 1. Add a heading showing your shop name.
-// 2. Add a Description.
-// 3. Center the title and description.
-// 4. Add an image from your desktop.
-
-//     <aside>
-//     ❗
-
-//     Do some research to find out how to [add local images](https://reactnative.dev/docs/images) to your project.
-
-//     </aside>
-
-// 5. Change the images' dimensions if needed.
