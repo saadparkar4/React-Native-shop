@@ -1,17 +1,15 @@
 import products from "@/data/products";
-import { Image, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import ProductItems from "@/components/ProductItems";
-import ProductItemsProps from "@/components/ProductItems";
 
 export default function Index() {
 	return (
 		<View
 			style={{
-				// display: "flex",
-				// // flex: 1,
-				justifyContent: "flex-start",
-				alignItems: "center",
-				overflowY: "scroll",
+				// flex: 1,
+				// justifyContent: "center",
+				// alignItems: "center",
+				overflow: "hidden",
 			}}>
 			<Text
 				style={{
@@ -36,9 +34,75 @@ export default function Index() {
 					borderRadius: 10,
 				}}
 			/>
-			<ProductItems pName="Image" pImage="Image" pPrice={10} />
-
-			<View />
+			<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+				<Text
+					style={{
+						padding: 14,
+						borderWidth: 1,
+						borderRadius: 10,
+						margin: 10,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 14,
+						borderWidth: 1,
+						borderRadius: 10,
+						margin: 10,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 14,
+						borderWidth: 1,
+						borderRadius: 10,
+						margin: 10,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 14,
+						borderWidth: 1,
+						borderRadius: 10,
+						margin: 10,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 14,
+						borderWidth: 1,
+						borderRadius: 10,
+						margin: 10,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 14,
+						borderWidth: 1,
+						borderRadius: 10,
+						margin: 10,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+			</ScrollView>
+			<ScrollView
+				showsVerticalScrollIndicator
+				style={{
+					flexDirection: "row",
+					flexWrap: "wrap",
+					width: "100%",
+				}}>
+				<View>
+					{products.map((productItem, index) => {
+						return <ProductItems key={index} product={productItem} />;
+					})}
+				</View>
+			</ScrollView>
 		</View>
 	);
 }
