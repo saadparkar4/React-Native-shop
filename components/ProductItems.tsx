@@ -1,9 +1,13 @@
 import products from "@/data/products";
 import { Image, Text, View } from "react-native";
 
-const ProductItems = () => {
-	let storeProducts = products[2];
+interface ProductItemsProps {
+	pName: string;
+	pImage: string;
+	pPrice: number;
+}
 
+const ProductItems = ({ pName, pImage, pPrice }: ProductItemsProps) => {
 	return (
 		<View
 			style={{
@@ -22,7 +26,7 @@ const ProductItems = () => {
 					justifyContent: "center",
 				}}>
 				<Image
-					source={{ uri: "https://i.giphy.com/KX5nwoDX97AtPvKBF6.webp" }}
+					source={{ uri: pImage }}
 					style={{
 						width: 120,
 						height: 120,
@@ -34,13 +38,13 @@ const ProductItems = () => {
 					style={{
 						margin: 10,
 					}}>
-					{storeProducts.pName}
+					{pName}
 				</Text>
 				<Text
 					style={{
 						marginBottom: 10,
 					}}>
-					{storeProducts.pPrice} KWD
+					{pPrice} KWD
 				</Text>
 			</View>
 			<View
@@ -51,7 +55,7 @@ const ProductItems = () => {
 					justifyContent: "center",
 				}}>
 				<Image
-					source={{ uri: "https://i.giphy.com/KX5nwoDX97AtPvKBF6.webp" }}
+					source={{ uri: pImage }}
 					style={{
 						width: 120,
 						height: 120,
@@ -63,13 +67,13 @@ const ProductItems = () => {
 					style={{
 						margin: 10,
 					}}>
-					{storeProducts.pName}
+					{pName}
 				</Text>
 				<Text
 					style={{
 						marginBottom: 10,
 					}}>
-					{storeProducts.pPrice} KWD
+					{pPrice} KWD
 				</Text>
 			</View>
 		</View>

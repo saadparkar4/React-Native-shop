@@ -1,10 +1,9 @@
 import products from "@/data/products";
 import { Image, Text, View } from "react-native";
 import ProductItems from "@/components/ProductItems";
+import ProductItemsProps from "@/components/ProductItems";
 
 export default function Index() {
-	let storeProducts = products[1];
-
 	return (
 		<View
 			style={{
@@ -26,7 +25,6 @@ export default function Index() {
 				style={{
 					margin: 20,
 				}}>
-				{" "}
 				Welcome to the store of the Full Stack Tricks
 			</Text>
 			<Image
@@ -38,8 +36,7 @@ export default function Index() {
 					borderRadius: 10,
 				}}
 			/>
-			<ProductItems />
-			<ProductItems />
+			<ProductItems pName="Image" pImage="Image" pPrice={10} />
 
 			<View />
 		</View>
