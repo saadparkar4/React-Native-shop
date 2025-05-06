@@ -8,7 +8,8 @@ export default function Index() {
 	return (
 		<View
 			style={{
-				flex: 1,
+				// display: "flex",
+				// // flex: 1,
 				justifyContent: "flex-start",
 				alignItems: "center",
 				overflowY: "scroll",
@@ -16,8 +17,10 @@ export default function Index() {
 			<Text
 				style={{
 					margin: 10,
+					fontSize: 34,
+					fontWeight: "bold",
 				}}>
-				<h1> My React Native Shop</h1>
+				My React Native Shop
 			</Text>
 			<Text
 				style={{
@@ -31,7 +34,7 @@ export default function Index() {
 				style={{
 					width: 300,
 					height: 300,
-					margin: 20,
+					margin: 10,
 					borderRadius: 10,
 				}}
 			/>
