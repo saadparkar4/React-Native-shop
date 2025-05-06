@@ -23,7 +23,7 @@ const ProductItems = ({ product }: ProductItemsProps) => {
 				padding: 10,
 				flexWrap: "wrap",
 				alignItems: "center",
-				width: "100%",
+				// width: "100%",
 			}}>
 			<Image
 				source={{ uri: product.pImage }}

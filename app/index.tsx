@@ -6,10 +6,10 @@ export default function Index() {
 	return (
 		<View
 			style={{
-				// flex: 1,
+				flex: 1,
 				// justifyContent: "center",
 				// alignItems: "center",
-				overflow: "hidden",
+				// overflow: "hidden",
 			}}>
 			<Text
 				style={{
@@ -34,75 +34,81 @@ export default function Index() {
 					borderRadius: 10,
 				}}
 			/>
-			<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-				<Text
-					style={{
-						padding: 14,
-						borderWidth: 1,
-						borderRadius: 10,
-						margin: 10,
-					}}>
-					HIIIIIIIIIIIIIIIIII
-				</Text>
-				<Text
-					style={{
-						padding: 14,
-						borderWidth: 1,
-						borderRadius: 10,
-						margin: 10,
-					}}>
-					HIIIIIIIIIIIIIIIIII
-				</Text>
-				<Text
-					style={{
-						padding: 14,
-						borderWidth: 1,
-						borderRadius: 10,
-						margin: 10,
-					}}>
-					HIIIIIIIIIIIIIIIIII
-				</Text>
-				<Text
-					style={{
-						padding: 14,
-						borderWidth: 1,
-						borderRadius: 10,
-						margin: 10,
-					}}>
-					HIIIIIIIIIIIIIIIIII
-				</Text>
-				<Text
-					style={{
-						padding: 14,
-						borderWidth: 1,
-						borderRadius: 10,
-						margin: 10,
-					}}>
-					HIIIIIIIIIIIIIIIIII
-				</Text>
-				<Text
-					style={{
-						padding: 14,
-						borderWidth: 1,
-						borderRadius: 10,
-						margin: 10,
-					}}>
-					HIIIIIIIIIIIIIIIIII
-				</Text>
-			</ScrollView>
-			<ScrollView
-				showsVerticalScrollIndicator
-				style={{
-					flexDirection: "row",
-					flexWrap: "wrap",
-					width: "100%",
-				}}>
+
+			<View>
 				<View>
-					{products.map((productItem, index) => {
-						return <ProductItems key={index} product={productItem} />;
-					})}
+					<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+						<Text
+							style={{
+								padding: 14,
+								borderWidth: 1,
+								borderRadius: 10,
+								margin: 10,
+							}}>
+							HIIIIIIIIIIIIIIIIII
+						</Text>
+						<Text
+							style={{
+								padding: 14,
+								borderWidth: 1,
+								borderRadius: 10,
+								margin: 10,
+							}}>
+							HIIIIIIIIIIIIIIIIII
+						</Text>
+						<Text
+							style={{
+								padding: 14,
+								borderWidth: 1,
+								borderRadius: 10,
+								margin: 10,
+							}}>
+							HIIIIIIIIIIIIIIIIII
+						</Text>
+						<Text
+							style={{
+								padding: 14,
+								borderWidth: 1,
+								borderRadius: 10,
+								margin: 10,
+							}}>
+							HIIIIIIIIIIIIIIIIII
+						</Text>
+						<Text
+							style={{
+								padding: 14,
+								borderWidth: 1,
+								borderRadius: 10,
+								margin: 10,
+							}}>
+							HIIIIIIIIIIIIIIIIII
+						</Text>
+						<Text
+							style={{
+								padding: 14,
+								borderWidth: 1,
+								borderRadius: 10,
+								margin: 10,
+							}}>
+							HIIIIIIIIIIIIIIIIII
+						</Text>
+					</ScrollView>
 				</View>
-			</ScrollView>
+				<View>
+					<ScrollView
+						showsVerticalScrollIndicator={false}
+						style={{
+							flexDirection: "row",
+							flexWrap: "wrap",
+							width: "100%",
+							height: "200px", //Added this heigh and the scroll works but for a limited space, not the full height
+						}}>
+						{products.map((productItem, index) => {
+							return <ProductItems key={index} product={productItem} />;
+						})}
+					</ScrollView>
+				</View>
+			</View>
 		</View>
 	);
 }
