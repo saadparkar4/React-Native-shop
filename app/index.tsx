@@ -6,10 +6,10 @@ export default function Index() {
 	return (
 		<View
 			style={{
-				flex: 1,
+				// flex: 1,
 				// justifyContent: "center",
 				// alignItems: "center",
-				// overflow: "hidden",
+				overflow: "hidden",
 			}}>
 			<Text
 				style={{
@@ -100,7 +100,7 @@ export default function Index() {
 						style={{
 							flexDirection: "row",
 							flexWrap: "wrap",
-							width: "100%",
+							// width: "100%",
 							height: "200px", //Added this heigh and the scroll works but for a limited space, not the full height
 						}}>
 						{products.map((productItem, index) => {
