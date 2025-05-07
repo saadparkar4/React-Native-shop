@@ -21,16 +21,16 @@ const ProductItems = ({ product }: ProductItemsProps) => {
 		<View
 			style={{
 				padding: 10,
-				flexWrap: "wrap",
+				// flexWrap: "wrap",
 				alignItems: "center",
-				// width: "100%",
+				width: "50%",
 			}}>
 			<Image
 				source={{ uri: product.pImage }}
 				style={{
 					width: 120,
 					height: 120,
-					margin: 20,
+					margin: 10,
 					borderRadius: 10,
 				}}
 			/>

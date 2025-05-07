@@ -6,109 +6,139 @@ export default function Index() {
 	return (
 		<View
 			style={{
-				// flex: 1,
-				// justifyContent: "center",
-				// alignItems: "center",
-				overflow: "hidden",
+				flex: 1,
+				height: "auto",
 			}}>
-			<Text
+			<View
 				style={{
-					margin: 10,
-					fontSize: 34,
-					fontWeight: "bold",
+					alignItems: "center",
 				}}>
-				My React Native Shop
-			</Text>
-			<Text
-				style={{
-					margin: 20,
-				}}>
-				Welcome to the store of the Full Stack Tricks
-			</Text>
-			<Image
-				source={{ uri: "https://i.giphy.com/KX5nwoDX97AtPvKBF6.webp" }}
-				style={{
-					width: 300,
-					height: 300,
-					margin: 10,
-					borderRadius: 10,
-				}}
-			/>
-
-			<View>
-				<View>
-					<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-						<Text
-							style={{
-								padding: 14,
-								borderWidth: 1,
-								borderRadius: 10,
-								margin: 10,
-							}}>
-							HIIIIIIIIIIIIIIIIII
-						</Text>
-						<Text
-							style={{
-								padding: 14,
-								borderWidth: 1,
-								borderRadius: 10,
-								margin: 10,
-							}}>
-							HIIIIIIIIIIIIIIIIII
-						</Text>
-						<Text
-							style={{
-								padding: 14,
-								borderWidth: 1,
-								borderRadius: 10,
-								margin: 10,
-							}}>
-							HIIIIIIIIIIIIIIIIII
-						</Text>
-						<Text
-							style={{
-								padding: 14,
-								borderWidth: 1,
-								borderRadius: 10,
-								margin: 10,
-							}}>
-							HIIIIIIIIIIIIIIIIII
-						</Text>
-						<Text
-							style={{
-								padding: 14,
-								borderWidth: 1,
-								borderRadius: 10,
-								margin: 10,
-							}}>
-							HIIIIIIIIIIIIIIIIII
-						</Text>
-						<Text
-							style={{
-								padding: 14,
-								borderWidth: 1,
-								borderRadius: 10,
-								margin: 10,
-							}}>
-							HIIIIIIIIIIIIIIIIII
-						</Text>
-					</ScrollView>
-				</View>
-				<View>
-					<ScrollView
-						showsVerticalScrollIndicator={false}
-						style={{
-							flexDirection: "row",
-							flexWrap: "wrap",
-							// width: "100%",
-							height: "200px", //Added this heigh and the scroll works but for a limited space, not the full height
-						}}>
-						{products.map((productItem, index) => {
-							return <ProductItems key={index} product={productItem} />;
-						})}
-					</ScrollView>
-				</View>
+				<Text
+					style={{
+						margin: 10,
+						fontSize: 34,
+						fontWeight: "bold",
+					}}>
+					My React Native Shop
+				</Text>
+				<Text
+					style={{
+						margin: 20,
+					}}>
+					Welcome to the store of the Full Stack Tricks
+				</Text>
+				<Image
+					source={{ uri: "https://i.giphy.com/KX5nwoDX97AtPvKBF6.webp" }}
+					style={{
+						width: 300,
+						height: 300,
+						margin: 20,
+						borderRadius: 10,
+					}}
+				/>
 			</View>
+			<ScrollView
+				horizontal={true}
+				showsHorizontalScrollIndicator={false}
+				contentContainerStyle={{
+					alignItems: "flex-start",
+					paddingHorizontal: 10,
+					justifyContent: "center",
+					height: 140, // Limit height for horizontal scroll
+				}}
+				style={{
+					marginBottom: 20,
+				}}>
+				<Text
+					style={{
+						padding: 12,
+						borderWidth: 1,
+						borderRadius: 10,
+						marginHorizontal: 10,
+						textAlign: "center",
+						fontSize: 12,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 12,
+						borderWidth: 1,
+						borderRadius: 10,
+						marginHorizontal: 10,
+						textAlign: "center",
+						fontSize: 12,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 12,
+						borderWidth: 1,
+						borderRadius: 10,
+						marginHorizontal: 10,
+						textAlign: "center",
+						fontSize: 12,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 12,
+						borderWidth: 1,
+						borderRadius: 10,
+						marginHorizontal: 10,
+						textAlign: "center",
+						fontSize: 12,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 12,
+						borderWidth: 1,
+						borderRadius: 10,
+						marginHorizontal: 10,
+						textAlign: "center",
+						fontSize: 12,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+				<Text
+					style={{
+						padding: 12,
+						borderWidth: 1,
+						borderRadius: 10,
+						marginHorizontal: 10,
+						textAlign: "center",
+						fontSize: 12,
+					}}>
+					HIIIIIIIIIIIIIIIIII
+				</Text>
+			</ScrollView>
+			<ScrollView
+				showsVerticalScrollIndicator={false}
+				contentContainerStyle={{
+					paddingHorizontal: 10,
+					paddingBottom: 20,
+					alignItems: "center",
+					justifyContent: "center",
+					width: "auto",
+				}}
+				// style={
+				// 	{
+				// 		// alignItems: "center",
+				// 		// flex: 1,
+				// 		// flexDirection: "row",
+				// 		// width: "auto",
+				// 		// height: "auto",
+				// 	}
+				// }
+			>
+				{products.map((productItem, index) => {
+					return <ProductItems key={index} product={productItem} />;
+				})}
+			</ScrollView>
 		</View>
 	);
 }
